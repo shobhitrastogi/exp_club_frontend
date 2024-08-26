@@ -11,7 +11,7 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://exp-club-backend.onrender.com/api/users/login', { email, password });
+      const response = await axios.post('https://exp-club-backend.vercel.app/api/users/login', { email, password });
       localStorage.setItem('token', response.data.token);
       navigate('/books'); // Redirect to a different page on successful login
     } catch (err) {

@@ -12,7 +12,7 @@ const RegisterPage = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://exp-club-backend.onrender.com/api/users/register', { name, email, password });
+      const response = await axios.post('https://exp-club-backend.vercel.app/api/users/register', { name, email, password });
       localStorage.setItem('token', response.data.token);
       navigate('/books'); // Redirect to a different page on successful registration
     } catch (err) {
